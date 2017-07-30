@@ -1,0 +1,46 @@
+##=============================================================##
+## SECTION: Function Definitions                               ##
+##=============================================================##
+
+function ChkDep() {
+    echo Checking dependency $1...
+    echo "    $2"
+    echo "    Reference: $3"
+    echo "    Recommended version: $4"
+    echo "    --------"
+    eval $5 >/dev/null 2>&1
+    if [ "$?" -eq "0" ]; then
+        echo "    OK."
+    else
+        DEP_OK=0
+        echo "    NOT FOUND!"
+    fi
+}
+
+##=============================================================##
+## SECTION: Main Body                                          ##
+##=============================================================##
+
+ALL_OK=1
+{% for dep in deps %}
+DEP_OK=1
+ChkDep \
+    "{{ dep.name }}" \
+    "{{ dep.desc }}" \
+    "{{ dep.ref }}" \
+    "{{ dep.ver }}" \
+    '{{ dep.cmd }}'
+if [ "$DEP_OK" -eq "0" ]; then
+    ALL_OK=0
+    read -rsp $'Press ENTER to continue...\n'
+fi
+{% endfor %}
+
+echo --------
+if [ "$ALL_OK" -eq "1" ]; then
+    echo [!] All dependencies successfully met.
+else
+    echo [WARNING] Some dependencies missing!
+fi
+echo --------
+read -rsp $'Press ENTER to continue...\n'

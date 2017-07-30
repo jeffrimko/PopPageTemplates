@@ -1,0 +1,4 @@
+= check_deps_bash
+:date: 29 July 2017
+
+This directory contains a PopPage template for a Linux bash script that will check for project dependencies.
