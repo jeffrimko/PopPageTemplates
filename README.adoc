@@ -2,3 +2,12 @@
 
 == Introduction
 This repository contains https://github.com/jeffrimko/PopPage[PopPage] templates for various use cases.
+
+== Usage
+These templates can be used directly from GitHub as follows:
+
+--------
+poppage make --inpath=https://github.com/jeffrimko/PopPageTemplates/blob/master/check_deps_batch/template.jinja2 --defaults=mydefaults.yaml --outpath=check_deps.bat
+--------
+
+Or clone/download this repository to customize templates as needed.
