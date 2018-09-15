@@ -1,0 +1,4 @@
+= python_prj
+:date: 29 July 2017
+
+A https://github.com/jeffrimko/PopPage[PopPage] template for generating basic Python projects.

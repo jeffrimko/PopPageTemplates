@@ -1,0 +1,8 @@
+= check_deps_batch
+:date: 29 July 2017
+
+A https://github.com/jeffrimko/PopPage[PopPage] template for a Microsoft batch script that will check for project dependencies.
+
+This template is the Microsoft batch equivalent of the following:
+
+  - https://github.com/jeffrimko/PopPageTemplates/tree/master/check_deps_bash[Linux Bash Script]
