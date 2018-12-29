@@ -1,0 +1,4 @@
+= python_req
+:date: 29 December 2018
+
+A https://github.com/jeffrimko/PopPage[PopPage] template for generating a Python `requirements.txt` file from dependencies used for the https://github.com/jeffrimko/PopPageTemplates/tree/master/check_deps_bash[Linux Bash Script] or https://github.com/jeffrimko/PopPageTemplates/tree/master/check_deps_batch[Microsoft Batch Script] templates.

@@ -1,0 +1,8 @@
+{% set url = 'https://pypi.org/project/' %}
+{% for dep in deps %}
+  {% if url in dep.ref %}
+    {% set toks = dep.ref.split(url) %}
+    {% set name = toks[1].split('/') %}
+    {{- name[0] }}
+  {% endif %}
+{% endfor %}
